@@ -9,12 +9,12 @@
 
 
 .show {
-  animation: slideIn .35s ease-in-out ;
+  /*animation: slideIn .35s ease-in-out ;*/
 
 }
 
 .hidden {
-  animation: slideOut 10.35s ease-in-out ;
+  /*animation: slideOut 10.35s ease-in-out ;*/
 
 }
 

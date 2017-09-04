@@ -6,6 +6,8 @@ import * as generalActions from './../actions/generalActions';
 import Header from './common/Header';
 import MobileMenu from './common/MobileMenu';
 import {connect} from 'react-redux';
+import {Motion, spring} from 'react-motion';
+import Transition from 'react-motion-ui-pack'
 
 class App extends React.Component {
   constructor(props, context) {
@@ -34,7 +36,23 @@ class App extends React.Component {
           loading={this.props.loading}
           openMobileMenu={this.openMobileMenu}
         />
-        <MobileMenu closeMenu={this.closeMobileMenu} showMenu={this.props.showMenu}/>
+        <Transition
+          component={false} // don't use a wrapping component
+          enter={{
+            opacity: 1,
+            translateY: spring(0, {stiffness: 400, damping: 10})
+          }}
+          leave={{
+            opacity: 0,
+            translateY: 250
+          }}
+        >
+          { this.props.showMenu &&
+          <div key="modal" className="menu__content">
+            <MobileMenu closeMenu={this.closeMobileMenu} showMenu={this.props.showMenu}/>
+          </div>
+          }
+        </Transition>
         {this.props.children}
       </div>
     );
