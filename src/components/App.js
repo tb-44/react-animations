@@ -31,28 +31,31 @@ class App extends React.Component {
   render() {
     console.log(this.props.showMenu)
     return (
-      <div className="container-fluid">
+      <div className="container-fluid home_container">
         <Header
           loading={this.props.loading}
           openMobileMenu={this.openMobileMenu}
         />
-        <Transition
-          component={false} // don't use a wrapping component
-          enter={{
-            opacity: 1,
-            translateY: spring(0, {stiffness: 400, damping: 10})
-          }}
-          leave={{
-            opacity: 0,
-            translateY: 250
-          }}
-        >
-          { this.props.showMenu &&
-          <div key="modal" className="menu__content">
-            <MobileMenu closeMenu={this.closeMobileMenu} showMenu={this.props.showMenu}/>
-          </div>
-          }
-        </Transition>
+          <MobileMenu closeMenu={this.closeMobileMenu} showMenu={this.props.showMenu}/>
+          {
+        // <Transition
+        //   component={false} // don't use a wrapping component
+        //   enter={{
+        //     opacity: 1,
+        //     translateY: spring(0, {stiffness: 400, damping: 10})
+        //   }}
+        //   leave={{
+        //     opacity: 0,
+        //     translateY: 250
+        //   }}
+        // >
+        //   { this.props.showMenu &&
+        //   <div key="modal" className="menu__content">
+        //     <MobileMenu closeMenu={this.closeMobileMenu} showMenu={this.props.showMenu}/>
+        //   </div>
+        //   }
+        // </Transition>
+      }
         {this.props.children}
       </div>
     );

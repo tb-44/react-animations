@@ -5,23 +5,70 @@
   position: fixed;
   z-index: 100;
   display: flex;
+  perspective: 800;
 }
 
+.closeMenu {
+  color: white;
+}
 
 .show {
-  /*animation: slideIn .35s ease-in-out ;*/
+  animation: slideIn .35s ease-in-out ;
 
 }
 
 .hidden {
-  /*animation: slideOut 10.35s ease-in-out ;*/
+  animation: slideOut 10.35s ease-in-out ;
+}
+.mobile_menu_link {
+  color:white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  list-style: none;
+  padding: 14px;
+}
 
+.show_link {
+  animation:
+  show_link_animation 1.2s ease-in-out,
+  flip_link_animation 0.55s ease-in-out
+}
+
+.show_link:nth-child(2) {
+    animation:
+    show_link_animation 1.8s ease-in-out,
+    flip_link_animation 0.95s ease-in-out
+}
+
+.show_link:nth-child(3) {
+    animation:
+    show_link_animation 2.2s ease-in-out,
+    flip_link_animation 0.95s ease-in-out infinite;
+}
+
+.hide_link {
+  animation:
+   hide_link_animation .25s ease-in-out;
+}
+
+@keyframes show_link_animation {
+    0%{transform: translateX(40%);}
+    100% {transform: translateX(0%);}
+}
+@keyframes flip_link_animation {
+    0%{transform: rotate3d(40%);}
+    100% {transform: rotate3d(40%)
+    }
+}
+
+@keyframes hide_link_animation {
+  0%{transform: rotate3d(0%);}
+  100% {transform: rotate3d(60%);}
 }
 
 @keyframes slideOut {
   0% {transform: translateX(0%);}
   100% {transform: translateX(100%);}
-
 }
 
 @keyframes slideIn {
@@ -31,38 +78,23 @@
 }
 
 /*Multiple animations
-You can comma-separate the values to declare multiple animations on a selector.*/
+You can comma-separate the values to declare multiple
+ animations on a selector.*/
 .animate-this {
   animation:
     first-animation 2s infinite,
     another-animation 1s;
 }
 
-/*If you use steps(10) in your animation, it will make sure only 10 keyframes happen in the allotted time.*/
+/* If you use steps(10) in your animation,
+it will make sure only 10 keyframes happen in
+the allotted time. */
+
 .move {
   animation: move 10s steps(10) infinite alternate;
 }
 
-/**/
 @keyframes move {
   from { top: 0; left: 0; }
   to   { top: 100px; left: 100px; }
-}
-
-.example-enter {
-  opacity: 0.01;
-}
-
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.example-leave {
-  opacity: 1;
-}
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
 }

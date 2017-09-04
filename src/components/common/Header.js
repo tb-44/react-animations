@@ -7,6 +7,7 @@ import '../../styles/Header.css';
 const Header = ({loading,openMobileMenu}) => {
   return (
     <nav className="main_header">
+    <div className="logo"></div>
       <ul className="desktop_nav">
         <IndexLink to="/" activeClassName="active">Home</IndexLink>
         {" | "}
@@ -17,6 +18,7 @@ const Header = ({loading,openMobileMenu}) => {
       </ul>
 
       <ul className="mobile_nav">
+      
         <li to="/" activeClassName="active" onClick={openMobileMenu}>Open menu</li>
       </ul>
     </nav>

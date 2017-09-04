@@ -1,22 +1,16 @@
 import React, {PropTypes} from 'react';
-import { CSSTransitionGroup } from 'react-transition-group';
 import '../../styles/MobileMenu.css';
 
-
 const MobileMenu = ({closeMenu,showMenu}) => {
+
   return (
-    <CSSTransitionGroup
-      transitionName="example"
-      className={"mobile_menu_container " + (showMenu ? 'show' : 'hidden')}
-      transitionEnterTimeout={500}
-      transitionLeaveTimeout={300}>
-      <aside>
-        <ul className="desktop_nav">
-          <li onClick={closeMenu}>Close menu</li>
+      <aside  className={"mobile_menu_container " + (showMenu ? 'show' : 'hidden')} >
+        <ul className="">
+          <li className={"mobile_menu_link " + (showMenu ? 'show_link' : 'hide_link')}>Home</li>
+          <li className={"mobile_menu_link " + (showMenu ? 'show_link' : 'hide_link')}>Course</li>
+          <li className={"mobile_menu_link " + (showMenu ? 'show_link' : 'hide_link')}>About</li>
         </ul>
       </aside>
-    </CSSTransitionGroup>
-
   );
 };
 
