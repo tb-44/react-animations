@@ -1,7 +1,7 @@
 {
-  "name": "animating-react",
+  "name": "pluralsight-redux-starter",
   "version": "1.0.0",
-  "description": "Starter kit for React animating",
+  "description": "Starter kit for React and Redux Pluralsight course by Cory House",
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
     "start": "npm-run-all --parallel test:watch open:src lint:watch",
@@ -11,7 +11,7 @@
     "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch"
   },
-  "author": "Ben Callis",
+  "author": "Cory House",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "6.8.0",
@@ -67,6 +67,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bencallis1/react-animations.git"
+    "url": "https://github.com/coryhouse/pluralsight-redux-starter"
   }
 }
