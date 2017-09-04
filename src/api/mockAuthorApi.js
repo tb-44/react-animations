@@ -5,19 +5,19 @@ import delay from './delay';
 // All calls return promises.
 const authors = [
   {
-    id: 'cory-house',
-    firstName: 'Cory',
-    lastName: 'House'
+    id: 'ben-callis',
+    firstName: 'Ben',
+    lastName: 'Callis'
   },
   {
-    id: 'scott-allen',
-    firstName: 'Scott',
-    lastName: 'Allen'
+    id: 'jeremy-robertson',
+    firstName: 'Jeremy',
+    lastName: 'Robertson'
   },
   {
-    id: 'dan-wahlin',
-    firstName: 'Dan',
-    lastName: 'Wahlin'
+    id: 'tyler-mcginnis',
+    firstName: 'Tyler',
+    lastName: 'McGinnis'
   }
 ];
 

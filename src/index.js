@@ -10,9 +10,10 @@ import {loadCourses} from './actions/courseActions';
 import {loadAuthors} from './actions/authorActions';
 import './styles/normalize.css';
 import './styles/styles.css';
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/toastr/build/toastr.min.css';
 
+// loading our store here
 const store = configureStore();
 store.dispatch(loadCourses());
 store.dispatch(loadAuthors());
