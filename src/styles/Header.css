@@ -1,0 +1,12 @@
+.main_header {
+  display: flex;
+  height:75px;
+  /*background-image: linear-gradient(-90deg, #414149 0%, #26262E 100%);*/
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+
+.desktop_nav {
+  display: none;
+}
