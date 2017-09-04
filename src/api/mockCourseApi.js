@@ -51,7 +51,7 @@ class CourseApi {
           //The server would generate ids and watchHref's for new courses in a real app.
           //Cloning so copy returned is passed by value rather than by reference.
           course.id = generateId(course);
-          course.watchHref = `https://www.locallabs.io/courses/${course.id}`;
+          course.watchHref = `https://www.locallabs.io/`;
           courses.push(course);
         }
 

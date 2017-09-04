@@ -9,5 +9,5 @@ export const UPDATE_COURSE_SUCCESS = 'UPDATE_COURSE_SUCCESS';
 
 // General actions for updating ui
 
-export const TOGGLE_MOBILE_MENU = 'TOGGLE_MOBILE_MENU'
+export const TOGGLE_MOBILE_MENU = 'TOGGLE_MOBILE_MENU';
 

@@ -17,7 +17,7 @@ const Header = ({loading,openMobileMenu}) => {
       </ul>
 
       <ul className="mobile_nav">
-        <IndexLink to="/" activeClassName="active" onClick={openMobileMenu}>Open menu</IndexLink>
+        <li to="/" activeClassName="active" onClick={openMobileMenu}>Open menu</li>
       </ul>
     </nav>
   );

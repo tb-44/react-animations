@@ -4,13 +4,65 @@
   background: #000;
   position: fixed;
   z-index: 100;
+  display: flex;
 }
 
 
 .show {
-  display: flex;
+  animation: slideIn .35s ease-in-out ;
+
 }
 
 .hidden {
-  display: none;
+  animation: slideOut 10.35s ease-in-out ;
+
+}
+
+@keyframes slideOut {
+  0% {transform: translateX(0%);}
+  100% {transform: translateX(100%);}
+
+}
+
+@keyframes slideIn {
+  0% {transform: translateX(100%);}
+  100% {transform: translateX(0%);}
+
+}
+
+/*Multiple animations
+You can comma-separate the values to declare multiple animations on a selector.*/
+.animate-this {
+  animation:
+    first-animation 2s infinite,
+    another-animation 1s;
+}
+
+/*If you use steps(10) in your animation, it will make sure only 10 keyframes happen in the allotted time.*/
+.move {
+  animation: move 10s steps(10) infinite alternate;
+}
+
+/**/
+@keyframes move {
+  from { top: 0; left: 0; }
+  to   { top: 100px; left: 100px; }
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }
